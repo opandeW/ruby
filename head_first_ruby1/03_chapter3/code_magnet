@@ -1,0 +1,60 @@
+# class Camera
+
+# 	def load
+# 		puts "Winding film"
+# 	end
+
+# 	def take_picture
+# 		puts "Triggering shutter"
+# 	end
+
+# 	def load_card
+# 		puts "Insterting memory card."
+# 	end
+
+
+
+# end
+
+# class DigitalCamera < Camera
+# end
+
+# camera = Camera.new
+# camera.load
+# camera.take_picture
+
+# camera2 = DigitalCamera.new
+# camera2.load_card
+# camera2.take_picture
+
+class Camera
+
+	
+	def take_picture
+		puts "Triggering shutter"
+	end
+
+
+	def load
+		puts "Winding film"
+	end
+
+
+end
+
+class DigitalCamera < Camera
+
+	def load
+		puts "Insterting memory card."
+	end
+	
+end
+
+camera = Camera.new
+camera.load
+camera.take_picture
+
+camera2 = DigitalCamera.new
+camera2.load
+camera2.take_picture
+

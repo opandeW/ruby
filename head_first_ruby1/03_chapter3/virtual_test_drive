@@ -1,0 +1,129 @@
+# # Redudant_code
+# class Car
+# 	attr_accessor :odometer
+# 	attr_accessor :gas_used
+
+# 	def mileage
+# 		@odometer / @gas_used
+# 	end
+
+# 	def acceslerate
+# 		puts "Floor it!"
+# 	end
+
+# 	def sound_horn
+# 		puts "Beep! Beep!"
+# 	end
+
+# 	def steer
+# 		puts "Turn front 2 wheels."
+# 	end
+# end
+
+# class Motorcycle
+# 	attr_accessor :odometer
+# 	attr_accessor :gas_used
+
+# 	def mileage
+# 		@odometer / @gas_used
+# 	end
+
+# 	def acceslerate
+# 		puts "Floor it!"
+# 	end
+
+# 	def sound_horn
+# 		puts "Beep! Beep!"
+# 	end
+
+# 	def steer
+# 		puts "Turn front wheel."
+# 	end
+# end
+
+
+# class Truck
+# 	attr_accessor :odometer
+# 	attr_accessor :gas_used
+
+# 	def mileage
+# 		@odometer / @gas_used
+# 	end
+
+# 	def acceslerate
+# 		puts "Floor it!"
+# 	end
+
+# 	def sound_horn
+# 		puts "Beep! Beep!"
+# 	end
+
+# 	def steer
+# 		puts "Turn front 2 wheels."
+# 	end
+# end
+
+class Vehicle
+	attr_accessor :odometer
+	attr_accessor :gas_used
+	attr_accessor :cargo
+
+	def load_bed(contents)
+		puts "Securing #{contents} in the truck bed."
+		@cargo = contents
+	end
+
+	def accelerate
+		puts "Floor it"
+	end
+
+	def sound_horn
+		puts "Beep! Beep!"
+	end
+
+	def steer
+		puts "Turn front 2 wheels"
+	end
+
+	def mileage
+		return @odometer / @gas_used
+	end
+end
+
+class Car < Vehicle
+
+end
+
+class Motorcycle < Vehicle
+	def steer
+		puts "Turn front wheel."
+	end
+end
+
+class Truck < Vehicle
+
+end
+
+
+truck = Truck.new
+truck.load_bed("259 bouncy balls")
+puts "The truck is carrying #{truck.cargo}"
+truck.odometer = 11432
+truck.gas_used = 366
+puts "Average MPG"
+puts truck.mileage
+
+# truck.accelerate
+# truck.steer
+
+car = Car.new
+# car.odometer = 11432
+car.odometer = 22914
+
+# car.gas_used = 366
+car.gas_used = 728
+
+puts "Lifetime MPG:"
+puts car.mileage
+
+puts car.instance_variables
