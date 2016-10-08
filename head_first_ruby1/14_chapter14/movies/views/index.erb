@@ -5,7 +5,12 @@
 		<title>My Movies</title>
 	</head>
 	<body>
-		<h1> My Movies</h1>
+	<%if true %>
+		<h1> This HTML will be included!</h1>
+		<% end %>
+		<% if false %>
+		<h1>This won't!</h1>
+		<% end %>
 		<ul>
 <!-- 			<li>movies</li>
 			<li>
@@ -14,9 +19,13 @@
 			<li>go</li>
 			<li>here</li> -->
 
-			<li><%= @movie.title %></li>
+<!-- 			<li><%= @movie.title %></li> -->
 <!-- 			<li><%= 15.0 / 6.0 %></li>
 			<li><%= Time.now%></li> -->
+
+			<% [1, 2, 3].each do |number| %>
+			<li><%= number %></li>
+			<% end %>
 		</ul>
 		<!-- <a href="/movies/new">Add New Movies</a> -->
 	</body>
