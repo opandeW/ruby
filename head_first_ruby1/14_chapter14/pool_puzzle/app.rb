@@ -1,4 +1,4 @@
-require 'addition'
+require 'sinatra'
 
 get ('/addition') do
 	@first = 3
