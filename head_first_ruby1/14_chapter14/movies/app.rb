@@ -13,5 +13,12 @@ get ('/movies') do
 end
 
 get ('/movies/new') do #Additon of a second route with a different path
-	erb :new
+	erb :new 
+end
+
+post ('movies/create') do
+	@movie = Movie.new
+	@movie.title = params['title']
+	@movie.director = params.['director']
+	@movie.year = params['year']
 end
